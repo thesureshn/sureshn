@@ -1,0 +1,149 @@
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/bg5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Main content container */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px; /* Add some padding for smaller screens */
+}
+
+/* Wrapper for content */
+section {
+    width: 100%; /* Make the section take full width on smaller screens */
+    max-width: 900px;  /* Keep a max width for large screens */
+    height: auto; /* Allow content to grow in height */
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Content box flex */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.content-wrapper img {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+    flex: 1;
+}
+
+/* Styling for email links */
+a {
+    color: #ffcc00; /* Set the email link color to a golden color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    color: #fff; /* Change color to white when hovered */
+    text-decoration: underline; /* Add underline when hovered */
+}
+
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Make header text smaller on mobile */
+    }
+
+    nav a {
+        padding: 10px 15px; /* Reduce padding on smaller screens */
+    }
+
+    section {
+        width: 90%; /* Allow the section to be more flexible */
+        max-width: none; /* Remove max width */
+        height: auto; /* Allow section to grow based on content */
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stack content vertically on mobile */
+        align-items: center; /* Center the content */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce footer text size on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Make header text even smaller */
+    }
+
+    nav a {
+        padding: 8px 12px; /* Further reduce padding on very small screens */
+    }
+
+    section {
+        width: 95%; /* Allow the section to take up more space */
+        margin: 10px; /* Reduce margin */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Further reduce footer text size */
+    }
+}
+
