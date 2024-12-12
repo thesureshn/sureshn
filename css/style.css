@@ -148,28 +148,33 @@ a:hover {
 }
 
 .social-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .social-links li {
-            display: inline-block;
-        }
-        .social-links a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .social-links img {
-            width: 24px; /* Set logo size */
-            height: 24px;
-            transition: transform 0.3s;
-        }
-        .social-links a:hover img {
-            transform: scale(1.2); /* Hover effect */
-        }
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    gap: 20px;
+}
+
+.social-links li {
+    margin-bottom: 10px; /* Add spacing between links */
+}
+
+.social-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links img {
+    width: 24px; /* Adjust icon size */
+    margin-right: 8px; /* Add space between the icon and the text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Hover effect */
+}
 
 
 .academic-links li {
