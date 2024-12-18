@@ -155,43 +155,109 @@ a:hover {
     gap: 20px;
 }
 
-.social-links li {
-    margin-bottom: 10px; /* Add spacing between links */
+/* Styling for the social links */
+.social-links, .academic-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
 }
 
-.social-links a {
+/* Styling for individual list items */
+.social-links li, .academic-links li {
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+/* Styling for links */
+.social-links a, .academic-links a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Space between icon and text */
 }
 
-.social-links img {
+/* Styling for the icons */
+.social-links img, .academic-links img {
     width: 24px; /* Adjust icon size */
-    margin-right: 8px; /* Add space between the icon and the text */
+    margin-right: 8px; /* Add space between the icon and text */
     vertical-align: middle; /* Align icon with text */
 }
 
-.social-links a:hover img {
+/* Only apply hand cursor when hovering over the text (not the icon) */
+.social-links a span, .academic-links a span {
+    cursor: pointer; /* Apply hand cursor only to the text */
+}
+
+/* Hover effect for icons */
+.social-links a:hover img, .academic-links a:hover img {
     transform: scale(1.2); /* Hover effect */
 }
 
-
-.academic-links li {
-    margin-bottom: 10px;
-    list-style: none;
+/* Styling for social media links */
+.social-links a {
+    color: #fff; /* White text for social links */
 }
 
+/* Styling for academic profile links */
 .academic-links a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #00bcd4;
-    text-decoration: none;
-    font-size: 1.1rem;
+    color: #00bcd4; /* Blue color for academic links */
+    font-size: 1.1rem; /* Slightly larger text */
 }
 
 .academic-links a img {
     width: 20px;
-    height: 20px;
+    height: 20px; /* Adjust size for academic logos */
+}
+
+/* Additional spacing between titles and links */
+h2 {
+    margin-bottom: 20px; /* Space below titles */
+}
+
+.quote-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.quote-container img {
+    max-width: 150px;
+    margin-right: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.quote-container blockquote {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+.quote-container blockquote:before {
+    content: open-quote;
+    font-size: 2rem;
+    line-height: 0;
+    vertical-align: -0.4em;
+    color: #4a90e2;
+}
+
+.quote-container blockquote:after {
+    content: close-quote;
+    font-size: 2rem;
+    line-height: 0;
+    vertical-align: -0.4em;
+    color: #4a90e2;
+}
+
+.quote-container blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
 }
